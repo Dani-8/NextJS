@@ -8,7 +8,8 @@ import Loader from '@/components/Loader';
 
 export default function ProductDetailPage() {
   const params = useParams();
-  const slug = params?.slug; // Access .slug instead of .id
+  const slug = params?.slug; 
+
 
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,7 @@ useEffect(() => {
       });
   }, [slug]);
 
+  
   if (loading) return <Loader message="Loading details..." />;
 
   return (
