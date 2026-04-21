@@ -1,10 +1,11 @@
-'use client';
 import Link from 'next/link';
 
 export default function ProductCard({ product }) {
+  const slug = product.title.toLowerCase().replace(/ /g, '-');
+
   return (
-    <Link href={`/products/${product.id}`} className="group cursor-pointer space-y-4">
-      <div className="aspect-[3/4] bg-slate-50 rounded-2xl p-6 flex items-center justify-center overflow-hidden relative">
+    <Link href={`/products/${slug}`} className="group cursor-pointer space-y-4">
+      <div className="aspect-[3/3] bg-slate-50 rounded-2xl p-6 flex items-center justify-center overflow-hidden relative">
         <img 
           src={product.image} 
           alt={product.title} 

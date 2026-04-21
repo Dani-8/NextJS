@@ -1,20 +1,27 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
-import { fetchProductById } from '@/lib/api';
+import { fetchProductBySlug } from '@/lib/api';
 import Loader from '@/components/Loader';
 
-export default function ProductDetailPage({ params }) {
+export default function ProductDetailPage() {
+  const params = useParams();
+  const slug = params?.slug; // Access .slug instead of .id
+
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchProductById(params.id).then((data) => {
-      setItem(data);
-      setLoading(false);
-    });
-  }, [params.id]);
+useEffect(() => {
+    if (!slug) return;
+
+    fetchProductBySlug(slug)
+      .then((data) => {
+        setItem(data);
+        setLoading(false);
+      });
+  }, [slug]);
 
   if (loading) return <Loader message="Loading details..." />;
 
