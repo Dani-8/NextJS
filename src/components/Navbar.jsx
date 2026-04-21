@@ -19,7 +19,7 @@ export default function Navbar() {
           <div className="bg-black p-1.5 rounded text-white">
             <ShoppingBag size={18} />
           </div>
-          <span className="font-bold tracking-tighter text-xl italic text-black">TRENDLY</span>
+          <span className="font-bold tracking-tighter text-xl italic text-black">STORE</span>
         </Link>
         
         <div className="flex gap-8 text-sm font-medium">

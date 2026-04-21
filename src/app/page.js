@@ -6,7 +6,7 @@ export default function Home() {
     <div className="space-y-24 py-10 animate-in fade-in duration-700">
       <section className="text-center space-y-8 max-w-3xl mx-auto">
         <div className="inline-block px-4 py-1.5 bg-slate-100 rounded-full text-xs font-bold tracking-widest uppercase text-black">
-          Spring Collection 2024
+          Summer Collection 2026
         </div>
         <h1 className="text-6xl md:text-7xl font-black tracking-tighter leading-none text-black">
           QUALITY STUFF. <br />
@@ -24,6 +24,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t pt-20">
         {[

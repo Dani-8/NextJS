@@ -1,4 +1,4 @@
-// 'use client';
+'use client';
 import Link from 'next/link';
 
 export default function ProductCard({ product }) {
@@ -12,6 +12,7 @@ export default function ProductCard({ product }) {
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
       </div>
+
       <div>
         <h3 className="font-bold text-sm tracking-tight line-clamp-1 group-hover:underline text-black">
           {product.title}
